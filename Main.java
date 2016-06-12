@@ -23,6 +23,15 @@ public class Main
 		}
 		// set rng to be the random number based off the seed.
 		Random rng=new Random(seed);
-		System.out.println("seed" + rng);
+
+		City pittsburgh = new City();
+
+		pittsburgh.addLocation("Outside City");
+		pittsburgh.addLocation("Hotel");
+		pittsburgh.addLocation("Diner");
+		pittsburgh.addLocation("Library");
+		pittsburgh.addLocation("College");
+
+
 	}
 }

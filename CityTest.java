@@ -26,7 +26,7 @@ public class CityTest
 		pittsburgh.addLocation("TestLocation");
 		assertEquals(pittsburgh.getNumLocations(), 1);
 	}
-
+	// Make sure that a location cannot be added more than once
 	@Test
 	public void addDuplicateLocationTest()
 	{
