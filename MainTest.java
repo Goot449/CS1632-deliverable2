@@ -1,8 +1,5 @@
 import static org.junit.Assert.*;
 
-/**
- * Created by Jake on 6/12/2016.
- */
 public class MainTest
 {
 	@org.junit.Before
