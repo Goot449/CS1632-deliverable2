@@ -31,7 +31,7 @@ public class Driver
 		return takenRoad;
 	}
 	//Return Destination of road taken
-	public String getLocation()
+	public String getDestinationLocation()
 	{
 		return _location;
 	}

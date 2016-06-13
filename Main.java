@@ -39,7 +39,7 @@ public class Main
 				Road road = driver.driveRandomLocation(rand);
 				System.out.printf("Driver "+ i +" heading from "+ road +".\n");
 
-			}while (!driver.getLocation().equals("Outside City"));
+			}while (!driver.getDestinationLocation().equals("Outside City"));
 
 			//initialize city text for outside city destinations
 			String newCity="";

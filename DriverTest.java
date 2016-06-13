@@ -28,12 +28,12 @@ public class DriverTest
     assertEquals(driver.driveRandomLocation(1).getName(), "Fifth Ave.");
   }
 
-  //make sure driver.getLocation() works properly
+  //make sure driver.getDestinationLocation() works properly
   @Test
   public void getLocationTest()
   {
     Driver driver = new Driver("Pittsburgh", "Sennot");
-    assertEquals(driver.getLocation(), "Sennot");
+    assertEquals(driver.getDestinationLocation(), "Sennot");
   }
 
   //make sure driver.getRoadTaken() works properly
