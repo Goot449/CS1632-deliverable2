@@ -9,15 +9,14 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 public class DriverTest
 {
-  //locations for testing
-  private String[] locations = {"Hotel", "Diner", "Library", "College", "Outside City"};
+
   //ensure driveRandom() returns null when no locations available
   @Test
   public void driveRandomNullTest()
   {
-    City mockCity = mock(City.class);
+    City mockCity = Mockito.mock(City.class);
     //make getOutgoingRoads() return no locations
-    when (mockCity.getOutgoingRoads(String)).thenReturn(null);
+    (mockCity.getOutgoingRoads(String)).thenReturn(null);
     assertEquals(driveRandom(1), null);
   }
 
@@ -25,9 +24,9 @@ public class DriverTest
   @Test
   public void driveRandomTest()
   {
-    City mockCity = mock(City.class);
+    City mockCity = Mockito.mock(City.class);
     //make getOutgoingRoads() return only Fifth Ave.
-    when (mockCity.getOutgoingRoads(String)).thenReturn("Fifth Ave.");
+    (mockCity.getOutgoingRoads(String)).thenReturn("Fifth Ave.");
     assertEquals(driveRandom(1).getName(), "Fifth Ave.");
   }
 
@@ -43,9 +42,9 @@ public class DriverTest
   @Test
   public void getRoadTakenTest()
   {
-    City mockCity = mock(City.class);
+    City mockCity = Mockito.mock(City.class);
     //make getOutgoingRoads() return only Fifth Ave.
-    when (mockCity.getOutgoingRoads(String)).thenReturn("Fifth Ave.");
+    (mockCity.getOutgoingRoads(String)).thenReturn("Fifth Ave.");
     assertEquals(driveRandom(1).getName(), "Fifth Ave.");
   }
 
