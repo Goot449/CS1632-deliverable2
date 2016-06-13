@@ -13,7 +13,7 @@ public class Driver
 		this._location = location;
 	}
 
-	public Road driveRandom(Random rand)
+	public Road driveRandomLocation(Random rand)
 	{
 		// Get list roads leading away from location
 		List<Road> possibleRoads = _city.getOutgoingRoads(_location);

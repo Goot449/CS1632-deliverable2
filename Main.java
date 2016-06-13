@@ -36,7 +36,7 @@ public class Main
 			// Keep driving until out of city
 			do
 			{
-				Road road = driver.driveRandom(rand);
+				Road road = driver.driveRandomLocation(rand);
 				System.out.printf("Driver "+ i +" heading from "+ road +".\n");
 
 			}while (!driver.getLocation().equals("Outside City"));
