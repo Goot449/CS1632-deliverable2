@@ -17,7 +17,7 @@ public class Driver
 	{
 		// Get list roads leading away from location
 		List<Road> possibleRoads = _city.getOutgoingRoads(_location);
-		//Ensure location has
+		//Ensure location has possible roads to take
 		if (possibleRoads.size() == 0)
 		{
 			return null;
