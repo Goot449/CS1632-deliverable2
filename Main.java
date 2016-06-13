@@ -21,8 +21,8 @@ public class Main
 			System.out.println("Single integer not specified");
 			return;
 		}
-		// set rng to be the random number based off the seed.
-		Random rng=new Random(seed);
+		// set rand to be the random number based off the seed.
+		Random rand=new Random(seed);
 		//Get City
 		City pittsburgh = getPittsburgh();
 
