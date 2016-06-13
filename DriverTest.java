@@ -7,15 +7,15 @@ public class DriverTest
 {
 
   //ensure driveRandomLocation() returns null when no locations available
-//  @Test
-//  public void driveRandomNullTest()
-//  {
-//    City mockCity = Mockito.mock(City.class);
-//    Driver driver = new Driver("Pittsburgh", "Sennot");
-//    //make getOutgoingRoads() return no locations
-//    (mockCity.getOutgoingRoads(String)).thenReturn(null);
-//    assertEquals(driveRandomLocation(1), null);
-//  }
+  @Test
+  public void driveRandomNullTest()
+  {
+    City mockCity = Mockito.mock(City.class);
+    Driver driver = new Driver("Pittsburgh", "Sennot");
+    //make getOutgoingRoads() return no locations
+    (mockCity.getOutgoingRoads(String)).thenReturn(null);
+    assertEquals(driveRandomLocation(1), null);
+  }
 
   //make sure driveRandomLocation returns a road
   @Test
