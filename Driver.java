@@ -3,8 +3,8 @@ import java.util.Random;
 
 public class Driver
 {
-	private City _city;
-	private String _location;
+	public City _city;
+	public String _location;
 	private String _roadTaken;
 	//initialize driver with location
 	public Driver(City pittsburgh, String location)
