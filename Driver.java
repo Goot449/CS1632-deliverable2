@@ -1,26 +1,44 @@
+import java.util.List;
+import java.util.Random;
+
 public class Driver
 {
-  private String _location;
-  private String _dest;
-  private String[] locations = {"Hotel", "Diner", "Library", "College", "Outside City"};
-  //Check that rand is recieved
-  public Driver(Random rand)
-  {
-    if (rand == null)
-    {
-      throw new IllegalArgumentException("argument missing.");
-    }
-    //set attribute for object
-    this._location = locations[rand.nextInt[4]];
-  }
+	private City _city;
+	private String _location;
+	private String _roadTaken;
+	//initialize driver with location
+	public Driver(City pittsburgh, String location)
+	{
+		this._city = pittsburgh;
+		this._location = location;
+	}
 
-  public String getLocation()
-  {
-    return _location;
-  }
-  public String getDest()
-  {
-    //find available routes
-    //choose from availabe routes randomly
-  }
+	public Road driveRandom(Random rand)
+	{
+		// Get list roads leading away from location
+		List<Road> possibleRoads = _city.getOutgoingRoads(_location);
+		//Ensure location has
+		if (possibleRoads.size() == 0)
+		{
+			return null;
+		}
+		// "Drive" down a random road
+		int roadIndex = rand.nextInt(possibleRoads.size());
+		Road takenRoad = possibleRoads.get(roadIndex);
+		//save destination and road name.
+		_location = takenRoad.getDest();
+		_roadTaken=takenRoad.getName();
+		return takenRoad;
+	}
+	//Return Destination of road taken
+	public String getLocation()
+	{
+		return _location;
+	}
+	//return name of road taken
+	public String getRoadTaken()
+	{
+		return _roadTaken;
+	}
+
 }

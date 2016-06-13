@@ -15,7 +15,12 @@ public class Road
 		this._src = src;
 		this._dest = dest;
 	}
-
+	//Oerride Road Object String operator with a string output of
+	@Override
+	public String toString()
+	{
+		return String.format("%s to %s via %s", _src, _dest, _name);
+	}
 	public String getName()
 	{
 		return _name;
@@ -30,4 +35,5 @@ public class Road
 	{
 		return _dest;
 	}
+
 }

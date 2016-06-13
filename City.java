@@ -53,4 +53,16 @@ public class City
 		return outgoing;
 	}
 
+	public String getRandomLocation(Random rand)
+	{
+		if (_locs.size() == 0)
+		{
+			return null;
+		}
+
+		int locIndex = rand.nextInt(_locs.size());
+
+		return _locs.get(locIndex);
+	}
+
 }
