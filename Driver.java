@@ -5,7 +5,7 @@ public class Driver
 {
 	public City _city;
 	public String _location;
-	private String _roadTaken;
+	public String _roadTaken;
 	//initialize driver with location
 	public Driver(City pittsburgh, String location)
 	{

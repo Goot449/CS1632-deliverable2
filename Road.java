@@ -1,8 +1,10 @@
 public class Road
 {
 	private String _src;
-	private String _name;
+	public String _name;
 	private String _dest;
+
+
 	//Check that street natme, origin, and destination are all specified strings
 	public Road(String name, String src, String dest)
 	{

@@ -35,6 +35,7 @@ public class CityTest
 		pittsburgh.addLocation("TestLocation");
 		assertEquals(pittsburgh.getNumLocations(), 1);
 	}
+	//Make sure roads can be paved
 	@Test
 	public void paveRoadTest()
 	{
