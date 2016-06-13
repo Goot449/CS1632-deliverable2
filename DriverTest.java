@@ -11,15 +11,15 @@ public class DriverTest
 {
   //locations for testing
   private String[] locations = {"Hotel", "Diner", "Library", "College", "Outside City"};
-  //Make sure driver starts with a location
-//  @Test
-//  public void driverStartLocationTest()
-//  {
-//    //set seed for random
-//    Random randT = Random(3);
-//    Driver driverOne = new Driver(rand);
-//    assertEquals(driverOne.getLocation(), locations[randT.nextInt(4)]);
-//  }
+  //ensure driveRandom() returns null when no locations available
+  @Test
+  public void driveRandomNullTest()
+  {
+    City mockCity = mock(City.class);
+    //make getOutgoingRoads() return no locations
+    when (mockCity.getOutgoingRoads(_location)).thenReturn(null);
+    assertEquals(driveRandom(1), null);
+  }
 
 
 }
