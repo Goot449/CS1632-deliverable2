@@ -21,16 +21,16 @@ public class City
 	{
 		return _locs.size();
 	}
-	public void paveRoad(Road f)
+	public void paveRoad(Road rd)
 	{
 		// Add locations
-		addLocation(f.getSource());
-		addLocation(f.getDest());
+		addLocation(rd.getSource());
+		addLocation(rd.getDest());
 
 		//Add road once origin and destination exist
-		if (!_roads.contains(f))
+		if (!_roads.contains(rd))
 		{
-			_roads.add(f);
+			_roads.add(rd);
 		}
 	}
 	public int getNumRoads()
