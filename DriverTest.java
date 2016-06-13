@@ -57,23 +57,28 @@ public class DriverTest
 		Random rand = new Random(1);
 		assertEquals(driver.driveRandomLocation(rand).getName(), "Fifth Ave.");
 	}
-//
-//	//make sure driver.getDestinationLocation() works properly
-//	@Test
-//	public void getLocationTest()
-//	{
-//		Driver driver = new Driver("Pittsburgh", "Sennot");
-//		assertEquals(driver.getDestinationLocation(), "Sennot");
-//	}
-//
-//	//make sure driver.getRoadTaken() works properly
-//	@Test
-//	public void getRoadTakenTest()
-//	{
-//		City mockCity = Mockito.mock(City.class);
-//		//make getOutgoingRoads() return only Fifth Ave.
-//		(mockCity.getOutgoingRoads(String)).thenReturn("Fifth Ave.");
-//		assertEquals(driveRandom(1).getName(), "Fifth Ave.");
-//	}
+
+	//make sure driver.getDestinationLocation() works properly
+	@Test
+	public void getLocationTest()
+	{
+		City mockCity = Mockito.mock(City.class);
+		Driver driver = new Driver(mockCity, "Sennot");
+		assertEquals(driver.getDestinationLocation(), "Sennot");
+
+	}
+
+	//make sure driver.getRoadTaken() works properly
+	@Test
+	public void getRoadTakenTest()
+	{
+		City mockCity = Mockito.mock(City.class);
+		Driver driver = new Driver(mockCity, "Sennot");
+		//make getOutgoingRoads() return only Fifth Ave.
+		Mockito.when (mockCity.getOutgoingRoads("Sennot")).thenReturn("Fifth Ave.");
+		Random rand = new Random(1);
+		assertEquals(driver.driveRandomLocation(rand).getName(), "Fifth Ave.");
+
+	}
 
 }
