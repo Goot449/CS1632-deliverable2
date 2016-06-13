@@ -10,7 +10,6 @@ import org.mockito.MockitoAnnotations;
 public class CityTest
 {
 
-
 	//Make sure city doesn't start with any locations
 	@Test
 	public void cityTestEmpty()
@@ -36,5 +35,14 @@ public class CityTest
 		pittsburgh.addLocation("TestLocation");
 		assertEquals(pittsburgh.getNumLocations(), 1);
 	}
+	@Test
+	public void paveRoadTest()
+	{
+
+		City pittsburgh = new City();
+		pittsburgh.paveRoad(new Road("Test Name", "Test start", "Test End"));
+		assertEquals(pittsburgh.getNumRoads(),1);
+	}
+
 
 }

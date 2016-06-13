@@ -23,15 +23,27 @@ public class Main
 		}
 		// set rng to be the random number based off the seed.
 		Random rng=new Random(seed);
+		//Get City
+		City pittsburgh = getPittsburgh();
 
+
+	}
+
+	public static City getPittsburgh()
+	{
 		City pittsburgh = new City();
 
-		pittsburgh.addLocation("Outside City");
-		pittsburgh.addLocation("Hotel");
-		pittsburgh.addLocation("Diner");
-		pittsburgh.addLocation("Library");
-		pittsburgh.addLocation("College");
+		pittsburgh.paveRoad(new Road("Bill St.", "Hotel", "Library"));
+		pittsburgh.paveRoad(new Road("Bill St.", "Library", "Hotel"));
+		pittsburgh.paveRoad(new Road("Phil St.", "College", "Diner"));
+		pittsburgh.paveRoad(new Road("Phil St.", "Diner", "College"));
+		pittsburgh.paveRoad(new Road("Fourth Ave.", "Outside City", "Hotel"));
+		pittsburgh.paveRoad(new Road("Fourth Ave.", "Hotel", "Diner"));
+		pittsburgh.paveRoad(new Road("Fourth Ave.", "Diner", "Outside City"));
+		pittsburgh.paveRoad(new Road("Fifth Ave.", "Outside City", "College"));
+		pittsburgh.paveRoad(new Road("Fifth Ave.", "College", "Library"));
+		pittsburgh.paveRoad(new Road("Fifth Ave.", "Library", "Outside City"));
 
-
+		return pittsburgh;
 	}
 }
